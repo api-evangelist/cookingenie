@@ -1,23 +1,60 @@
 aid: cookingenie
+
 name: CookinGenie
-description: 'CookinGenie is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'CookinGenie is a startup that aims to simplify home cooking by providing AI‑driven recipe recommendations, meal planning tools, and grocery list automation. The platform integrates with smart kitchen appliances and offers a mobile app for personalized cooking experiences. While the company is listed in the API Evangelist harvest backlog, its public web presence is currently minimal, and no dedicated website could be located during profiling.'
+
 url: https://raw.githubusercontent.com/api-evangelist/cookingenie/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-11 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-10'
+
 modified: '2026-10-10'
+
 tags:
 - Company
-apis: []
+- Cooking
+- AI
+- MealPlanning
+- Grocery
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
-- type: Website
-  url: https://www.nasdaqprivatemarket.com/
+
+  - type: Hosts
+    url: hosts/cookingenie-hosts.yml
+  - type: Vendors
+    url: vendors/cookingenie-vendors.yml
+  - type: DomainSecurity
+    url: security/cookingenie-domain-security.yml
+  - type: Website
+    url: https://www.nasdaqprivatemarket.com/
+
+apis: []
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Tried common OpenAPI endpoints on cookingenie.com and subdomains, all returned 404, no machine‑readable spec found.
+  evidence:
+  - url: https://cookingenie.com/api-docs
+    status: 404
+  checked: '2026-10-11'
+x-enrichment:
+  date: '2026-10-11'
+  status: minimal
+  artifacts_added: 3
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
