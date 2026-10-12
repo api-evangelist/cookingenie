@@ -41,8 +41,7 @@ common:
   - type: DomainSecurity
     url: security/cookingenie-domain-security.yml
   - type: Website
-    url: https://www.nasdaqprivatemarket.com/
-
+    url: https://cookingenie.com/
 apis: []
 x-coverage:
   state: unreadable
